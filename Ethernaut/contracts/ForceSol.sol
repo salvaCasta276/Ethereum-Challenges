@@ -4,7 +4,7 @@ pragma solidity >=0.6.0;
 contract ForceSol{
     Force public targetContract;
     constructor (address payable _targetContract){
-        targetContract = Force(_targetContract);
+        targetContract = Force(_targetContract );
     }
 
     function attack() payable public {
