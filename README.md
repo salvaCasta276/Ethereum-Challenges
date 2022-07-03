@@ -1,1 +1,1 @@
-Repo para tratar de resolver challenges de ethereum
+Repo to work on and learn about Ethereum
